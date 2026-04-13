@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Login</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        max-width: 1100px;
+        width: 100%;
+        display: flex;
+        min-height: 600px;
+      }
+
+      /* LEFT SIDE - INFORMATION */
+      .info-section {
+        flex: 1;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info-section::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        top: -100px;
+        left: -100px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .info-section::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        bottom: -50px;
+        right: -50px;
+        animation: float 8s ease-in-out infinite reverse;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(20px) translateX(20px);
+        }
+      }
+
+      .info-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .info-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        animation: slideInLeft 0.8s ease-out;
+      }
+
+      .info-section .tagline {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        opacity: 0.95;
+        animation: slideInLeft 1s ease-out;
+      }
+
+      .feature-list {
+        list-style: none;
+        margin-top: 30px;
+      }
+
+      .feature-item {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        animation: slideInLeft 0.6s ease-out forwards;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .feature-item:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .feature-item:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .feature-item:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      .feature-item:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      .feature-item .icon {
+        font-size: 24px;
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* RIGHT SIDE - INTERACTIVE */
+      .interactive-section {
+        flex: 1;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #667eea;
+        font-size: 1.8em;
+        animation: fadeInDown 0.8s ease-out;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .role-selection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .role-card {
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 25px 15px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        animation: fadeInUp 0.6s ease-out forwards;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .role-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .role-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .role-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .role-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .role-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .role-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(102, 126, 234, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .role-card:hover::before {
+        left: 100%;
+      }
+
+      .role-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        border-color: #667eea;
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+      }
+
+      .role-card:active {
+        transform: translateY(-2px) scale(0.98);
+      }
+
+      .role-icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+        display: inline-block;
+        transition: transform 0.3s;
+      }
+
+      .role-card:hover .role-icon {
+        transform: scale(1.2) rotate(5deg);
+      }
+
+      .role-card h3 {
+        color: #333;
+        font-size: 1em;
+      }
+
+      .login-form {
+        display: none;
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .login-form.active {
+        display: block;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        font-size: 15px;
+        transition: all 0.3s;
+      }
+
+      .form-group input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-login::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.6s,
+          height 0.6s;
+      }
+
+      .btn-login:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .btn-login:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-login:active {
+        transform: translateY(0);
+      }
+
+      .back-btn {
+        color: #667eea;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 25px;
+        font-weight: 600;
+        transition: all 0.3s;
+        padding: 8px 12px;
+        border-radius: 6px;
+      }
+
+      .back-btn:hover {
+        background: rgba(102, 126, 234, 0.1);
+        transform: translateX(-5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .info-section {
+          padding: 30px 25px;
+        }
+
+        .info-section h1 {
+          font-size: 2em;
+        }
+
+        .interactive-section {
+          padding: 30px 25px;
+        }
+
+        .role-selection {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- LEFT SIDE - INFORMATION -->
+      <div class="info-section">
+        <div class="info-content">
+          <h1>Campus Portal</h1>
+          <p class="tagline">
+            Your gateway to academic excellence and career opportunities
+          </p>
+
+          <ul class="feature-list">
+            <li class="feature-item">
+              <div class="icon">🎓</div>
+              <div>
+                Access comprehensive student resources and academic tools
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="icon">📊</div>
+              <div>Track your progress and manage your academic journey</div>
+            </li>
+            <li class="feature-item">
+              <div class="icon">💼</div>
+              <div>
+                Connect with placement opportunities and career guidance
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="icon">🔐</div>
+              <div>Secure and personalized experience for every user role</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE - INTERACTIVE -->
+      <div class="interactive-section">
+        <h2 class="section-title" id="sectionTitle">Select Your Role</h2>
+
+        <!-- ROLE SELECTION -->
+        <div class="role-selection" id="roleSelection">
+          <div class="role-card" data-role="student">
+            <div class="role-icon">🎓</div>
+            <h3>Student</h3>
+          </div>
+
+          <div class="role-card" data-role="coordinator">
+            <div class="role-icon">👨‍🏫</div>
+            <h3>Coordinator</h3>
+          </div>
+
+          <div class="role-card" data-role="hod">
+            <div class="role-icon">👔</div>
+            <h3>HOD</h3>
+          </div>
+
+          <div class="role-card" data-role="tpo">
+            <div class="role-icon">💼</div>
+            <h3>TPO</h3>
+          </div>
+
+          <div class="role-card" data-role="campus-tpo">
+            <div class="role-icon">🏢</div>
+            <h3>Campus TPO</h3>
+          </div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="login-form" id="loginForm">
+          <span class="back-btn" id="backBtn">← Back</span>
+
+          <form id="loginFormElement">
+            <div class="form-group">
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let selectedRole = "";
+
+      const roleCards = document.querySelectorAll(".role-card");
+      const roleSelection = document.getElementById("roleSelection");
+      const loginForm = document.getElementById("loginForm");
+      const backBtn = document.getElementById("backBtn");
+      const sectionTitle = document.getElementById("sectionTitle");
+      const loginFormElement = document.getElementById("loginFormElement");
+
+      roleCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          selectedRole = card.dataset.role;
+          roleSelection.style.display = "none";
+          loginForm.classList.add("active");
+
+          const titles = {
+            student: "Student Login",
+            coordinator: "Coordinator Login",
+            hod: "HOD Login",
+            tpo: "TPO Login",
+            "campus-tpo": "Campus TPO Login",
+          };
+
+          sectionTitle.textContent = titles[selectedRole];
+        });
+      });
+
+      backBtn.addEventListener("click", () => {
+        loginForm.classList.remove("active");
+        roleSelection.style.display = "grid";
+        sectionTitle.textContent = "Select Your Role";
+        selectedRole = "";
+      });
+
+      // 🔑 LOGIN + REDIRECTION
+      loginFormElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (!selectedRole) {
+          alert("Please select a role");
+          return;
+        }
+
+        const redirectMap = {
+          student: "std/index.html",
+          coordinator: "coordinator/coordinator-index.html",
+          hod: "hod/hod-index.html",
+          tpo: "tpo/index.html",
+          "campus-tpo": "Campus_TPO/index.html"
+        };
+
+        window.location.href = redirectMap[selectedRole];
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Internship Management System</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Create Account</h1>
+    <p class="subtitle">Internship Management System</p>
+
+    <form id="signupForm">
+
+        <div class="name-group">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="John">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role *</label>
+            <select id="role" name="role" required>
+                <option value="">Select your role</option>
+                <option value="student">Student</option>
+                <option value="coordinator">Coordinator</option>
+                <option value="hod">HOD (Head of Department)</option>
+                <option value="tpo">TPO (Training & Placement Officer)</option>
+                <option value="campus_tpo">Campus TPO</option>
+                <!-- <option value="principal">Principal</option>
+                <option value="company_director">Company Director</option>
+                <option value="company_coordinator">Company Coordinator</option> -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" required placeholder="Enter a strong password">
+        </div>
+
+        <!-- ✅ CORRECT BUTTON -->
+        <button type="submit" class="submit-btn">Sign Up</button>
+
+    </form>
+
+    <div class="login-link">
+        Already have an account? <a href="./index.html">Log in</a>
+    </div>
+</div>
+
+<!-- ✅ JAVASCRIPT -->
+<script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // stop default form submit
+
+        // Collect values (for future backend use)
+        const userData = {
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            role: document.getElementById("role").value,
+            password: document.getElementById("password").value
+        };
+
+        // Temporary success message
+        alert("Account created successfully!");
+
+        // ✅ Redirect to login page
+        window.location.href = "./index.html";
+    });
+</script>
+
+</body>
+</html>

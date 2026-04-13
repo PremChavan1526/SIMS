@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html" class="active">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Messages & Contact</h1>
+        
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card">
+                    <h3>Message Categories</h3>
+                    <div class="stat-item" style="cursor: pointer;">
+                        <span class="stat-label">Inbox</span>
+                        <span class="stat-value">24</span>
+                    </div>
+                    <div class="stat-item" style="cursor: pointer;">
+                        <span class="stat-label">Urgent</span>
+                        <span class="stat-value danger">5</span>
+                    </div>
+                    <div class="stat-item" style="cursor: pointer;">
+                        <span class="stat-label">Student Queries</span>
+                        <span class="stat-value">15</span>
+                    </div>
+                    <div class="stat-item" style="cursor: pointer;">
+                        <span class="stat-label">Company Requests</span>
+                        <span class="stat-value">6</span>
+                    </div>
+                    <div class="stat-item" style="cursor: pointer;">
+                        <span class="stat-label">Sent</span>
+                        <span class="stat-value">89</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Contacts</h3>
+                    <div style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                        <strong>Department Head</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Dr. Michael Roberts</p>
+                        <p style="color: #667eea; font-size: 14px;">m.roberts@university.edu</p>
+                    </div>
+                    <div style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                        <strong>HR Office</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Career Services</p>
+                        <p style="color: #667eea; font-size: 14px;">hr@university.edu</p>
+                    </div>
+                    <div style="padding: 10px 0;">
+                        <strong>IT Support</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Technical Help Desk</p>
+                        <p style="color: #667eea; font-size: 14px;">support@university.edu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card">
+                    <h3>Recent Messages</h3>
+                    
+                    <div class="application-item" style="border-left-color: #ef4444;">
+                        <div class="app-header">
+                            <strong>Sarah Smith</strong>
+                            <span class="badge rejected" style="background: #ef4444;">Urgent</span>
+                        </div>
+                        <p><strong>Subject:</strong> Question about internship documentation</p>
+                        <p style="font-size: 14px; color: #666; margin-top: 8px;">Hi, I need clarification on which documents are required for my internship application. Could you please...</p>
+                        <small>Received: 2 hours ago</small>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">Reply</a>
+                            <a href="#" class="action-link">View Full Message</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-header">
+                            <strong>Tech Solutions Inc.</strong>
+                            <span class="badge verified">Company</span>
+                        </div>
+                        <p><strong>Subject:</strong> Interview schedule for shortlisted candidates</p>
+                        <p style="font-size: 14px; color: #666; margin-top: 8px;">Dear Coordinator, We would like to schedule interviews for the following candidates...</p>
+                        <small>Received: 5 hours ago</small>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">Reply</a>
+                            <a href="#" class="action-link">View Full Message</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-header">
+                            <strong>Kevin Park</strong>
+                            <span class="badge pending">Student</span>
+                        </div>
+                        <p><strong>Subject:</strong> Request for recommendation letter</p>
+                        <p style="font-size: 14px; color: #666; margin-top: 8px;">I hope this email finds you well. I am applying for an internship and would appreciate if you could...</p>
+                        <small>Received: 1 day ago</small>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">Reply</a>
+                            <a href="#" class="action-link">View Full Message</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-header">
+                            <strong>Analytics Pro</strong>
+                            <span class="badge verified">Company</span>
+                        </div>
+                        <p><strong>Subject:</strong> Internship offer extension request</p>
+                        <p style="font-size: 14px; color: #666; margin-top: 8px;">We are impressed with the quality of applicants and would like to extend our internship offer...</p>
+                        <small>Received: 1 day ago</small>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">Reply</a>
+                            <a href="#" class="action-link">View Full Message</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Send New Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>To</label>
+                            <input type="text" placeholder="Email address or select recipient">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Message subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="6" placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; cursor: pointer;">
+                                <input type="checkbox" style="width: auto; margin-right: 10px;">
+                                <span>Mark as urgent</span>
+                            </label>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="button" class="btn" style="background: #6b7280; color: white;">Save Draft</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Contact Information</h3>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                        <p><strong>Coordinator Office</strong></p>
+                        <p style="color: #666; margin-top: 10px;">
+                            Internship Coordination Center<br>
+                            University Main Building, Room 305<br>
+                            123 University Avenue<br>
+                            City, State 12345
+                        </p>
+                        <p style="color: #666; margin-top: 15px;">
+                            <strong>Phone:</strong> (555) 234-5678<br>
+                            <strong>Email:</strong> coordinator@university.edu<br>
+                            <strong>Office Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

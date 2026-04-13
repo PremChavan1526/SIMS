@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinator Portal - Internship Management System</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html" class="active">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Welcome Coordinator</h1>
+        
+        <div class="action-buttons">
+            <a href="coordinator-verify.html" class="action-btn">Verify</a>
+            <a href="coordinator-check-doc.html" class="action-btn">Check Doc</a>
+            <a href="coordinator-approve.html" class="action-btn">Approve / Reject</a>
+            <a href="coordinator-monitor.html" class="action-btn">Monitor</a>
+        </div>
+        
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card stats-card">
+                    <h3>Statistics Overview</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Applications</span>
+                        <span class="stat-value">127</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pending Verification</span>
+                        <span class="stat-value warning">23</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Approved</span>
+                        <span class="stat-value success">89</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Rejected</span>
+                        <span class="stat-value danger">15</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Active Internships</span>
+                        <span class="stat-value">67</span>
+                    </div>
+                </div>
+                
+                <div class="card suggestion-card">
+                    <h3>Suggest Correction</h3>
+                    <form class="suggestion-form">
+                        <div class="form-group">
+                            <label>Application ID</label>
+                            <input type="text" placeholder="Enter application ID">
+                        </div>
+                        <div class="form-group">
+                            <label>Correction Type</label>
+                            <select>
+                                <option>Select type</option>
+                                <option>Document Issues</option>
+                                <option>Information Mismatch</option>
+                                <option>Missing Details</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Comments</label>
+                            <textarea rows="3" placeholder="Enter correction details"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Suggestion</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card data-card">
+                    <h3>Recent Applications</h3>
+                    <div class="application-list">
+                        <div class="application-item">
+                            <div class="app-header">
+                                <strong>John Doe</strong>
+                                <span class="badge pending">Pending</span>
+                            </div>
+                            <p>Software Development Intern - Tech Solutions Inc.</p>
+                            <small>Applied: Jan 20, 2026 | ID: APP-2026-0127</small>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="app-header">
+                                <strong>Sarah Smith</strong>
+                                <span class="badge verified">Verified</span>
+                            </div>
+                            <p>Data Analytics Intern - Analytics Pro</p>
+                            <small>Applied: Jan 19, 2026 | ID: APP-2026-0126</small>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="app-header">
+                                <strong>Mike Johnson</strong>
+                                <span class="badge pending">Pending</span>
+                            </div>
+                            <p>UI/UX Design Intern - Creative Studios</p>
+                            <small>Applied: Jan 19, 2026 | ID: APP-2026-0125</small>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="app-header">
+                                <strong>Emily Chen</strong>
+                                <span class="badge approved">Approved</span>
+                            </div>
+                            <p>Marketing Intern - Brand Boost LLC</p>
+                            <small>Applied: Jan 18, 2026 | ID: APP-2026-0124</small>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="app-header">
+                                <strong>David Lee</strong>
+                                <span class="badge rejected">Rejected</span>
+                            </div>
+                            <p>Cybersecurity Intern - SecureNet Systems</p>
+                            <small>Applied: Jan 18, 2026 | ID: APP-2026-0123</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="quick-action-grid">
+                        <a href="coordinator-verify.html" class="quick-action-item">
+                            <div class="action-icon">✓</div>
+                            <span>Verify Applications</span>
+                        </a>
+                        <a href="coordinator-check-doc.html" class="quick-action-item">
+                            <div class="action-icon">📄</div>
+                            <span>Review Documents</span>
+                        </a>
+                        <a href="coordinator-approve.html" class="quick-action-item">
+                            <div class="action-icon">✔</div>
+                            <span>Approve/Reject</span>
+                        </a>
+                        <a href="coordinator-monitor.html" class="quick-action-item">
+                            <div class="action-icon">📊</div>
+                            <span>Monitor Progress</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

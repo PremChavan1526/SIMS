@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPO Portal - Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">TPO Portal</div>
+        <nav class="sidebar-menu">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>Monitor Applications</h1>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by student name, company, or position...">
+            <button class="btn-small">Search</button>
+        </div>
+
+        <div class="dashboard-layout" style="margin-bottom: 30px;">
+            <div class="card stats-card">
+                <h2>Application Overview</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Total Applications:</span>
+                    <span class="stat-value">485</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Under Review:</span>
+                    <span class="stat-value">127</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Shortlisted:</span>
+                    <span class="stat-value">89</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Selected:</span>
+                    <span class="stat-value">45</span>
+                </div>
+            </div>
+
+            <div class="card stats-card">
+                <h2>Recent Activity</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Applications Today:</span>
+                    <span class="stat-value">23</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Interviews Scheduled:</span>
+                    <span class="stat-value">8</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Offers Extended:</span>
+                    <span class="stat-value">5</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Pending Responses:</span>
+                    <span class="stat-value">12</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Applied Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>Tech Corp</td>
+                        <td>Software Developer</td>
+                        <td>2026-01-18</td>
+                        <td><span class="status-pending">Under Review</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Priya Patel</td>
+                        <td>Innovation Labs</td>
+                        <td>Data Analyst</td>
+                        <td>2026-01-19</td>
+                        <td><span class="status-verified">Shortlisted</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amit Kumar</td>
+                        <td>Digital Solutions</td>
+                        <td>UI/UX Designer</td>
+                        <td>2026-01-17</td>
+                        <td><span class="status-active">Selected</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sneha Reddy</td>
+                        <td>Tech Corp</td>
+                        <td>Software Developer</td>
+                        <td>2026-01-20</td>
+                        <td><span class="status-pending">Under Review</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vikram Singh</td>
+                        <td>Innovation Labs</td>
+                        <td>Data Analyst</td>
+                        <td>2026-01-16</td>
+                        <td><span class="status-verified">Shortlisted</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Anjali Mehta</td>
+                        <td>Global Tech</td>
+                        <td>Business Analyst</td>
+                        <td>2026-01-21</td>
+                        <td><span class="status-pending">Under Review</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rohan Gupta</td>
+                        <td>Digital Solutions</td>
+                        <td>UI/UX Designer</td>
+                        <td>2026-01-15</td>
+                        <td><span class="status-active">Selected</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kavya Iyer</td>
+                        <td>Tech Corp</td>
+                        <td>Software Developer</td>
+                        <td>2026-01-19</td>
+                        <td><span class="status-verified">Shortlisted</span></td>
+                        <td>
+                            <button class="btn-small">View Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('.data-table tbody tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

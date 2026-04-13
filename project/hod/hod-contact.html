@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HOD Portal</title>
+    <link rel="stylesheet" href="hod.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            HOD Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="hod-index.html">Home</a>
+            <a href="hod-opportunities.html">Opportunities</a>
+            <a href="hod-contact.html" class="active">Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="hod-profile.html">Profile</a>
+            <a href="hod-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Contact & Communication</h1>
+        
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card">
+                    <h3>Send Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>To</label>
+                            <select>
+                                <option>Select recipient</option>
+                                <option>All Students</option>
+                                <option>Coordinators</option>
+                                <option>Faculty Members</option>
+                                <option>Specific Student</option>
+                                <option>Company Contact</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Message subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="8" placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; cursor: pointer;">
+                                <input type="checkbox" style="width: auto; margin-right: 10px;">
+                                <span>Send as department-wide announcement</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Contacts</h3>
+                    <div style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <strong>University Administration</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Dean's Office</p>
+                        <p style="color: #667eea; font-size: 14px;">dean@university.edu</p>
+                    </div>
+                    <div style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <strong>Career Services</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Placement Office</p>
+                        <p style="color: #667eea; font-size: 14px;">careers@university.edu</p>
+                    </div>
+                    <div style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                        <strong>Internship Coordinator</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Dr. Jane Doe</p>
+                        <p style="color: #667eea; font-size: 14px;">coordinator@university.edu</p>
+                    </div>
+                    <div style="padding: 12px 0;">
+                        <strong>IT Support</strong>
+                        <p style="color: #666; font-size: 14px; margin-top: 5px;">Technical Help Desk</p>
+                        <p style="color: #667eea; font-size: 14px;">support@university.edu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card">
+                    <h3>Recent Messages & Inquiries</h3>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">📧</div>
+                        <div class="activity-content">
+                            <strong>Tech Solutions Inc.</strong>
+                            <p>Partnership renewal request for next academic year</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-content">
+                            <strong>Sarah Smith (Student)</strong>
+                            <p>Request for approval extension - internship documents</p>
+                            <small>5 hours ago</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">💼</div>
+                        <div class="activity-content">
+                            <strong>Analytics Pro</strong>
+                            <p>New opportunity submission - Data Science roles</p>
+                            <small>1 day ago</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">📄</div>
+                        <div class="activity-content">
+                            <strong>Coordinator Office</strong>
+                            <p>Weekly report - 45 applications processed</p>
+                            <small>2 days ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Department Contact Information</h3>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                        <p><strong>Head of Department</strong></p>
+                        <p style="color: #666; margin-top: 10px;">
+                            Dr. Michael Roberts<br>
+                            Department of Computer Science<br>
+                            University Main Building, Room 401<br>
+                            123 University Avenue<br>
+                            City, State 12345
+                        </p>
+                        <p style="color: #666; margin-top: 15px;">
+                            <strong>Phone:</strong> (555) 345-6789<br>
+                            <strong>Email:</strong> hod@university.edu<br>
+                            <strong>Office Hours:</strong> Mon-Fri, 10:00 AM - 4:00 PM
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Announcements</h3>
+                    <div class="student-card">
+                        <h4>Internship Fair 2026</h4>
+                        <p>Annual career fair scheduled for March 15, 2026. Over 50 companies expected to participate.</p>
+                        <small>Posted: Jan 18, 2026</small>
+                    </div>
+
+                    <div class="student-card">
+                        <h4>New Partnership Announcement</h4>
+                        <p>We are pleased to announce new partnerships with 5 leading tech companies for internship opportunities.</p>
+                        <small>Posted: Jan 10, 2026</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

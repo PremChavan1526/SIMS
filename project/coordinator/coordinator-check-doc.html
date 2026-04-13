@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Documents - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Document Review</h1>
+        
+        <div class="card">
+            <h3>Search Application</h3>
+            <form style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <input type="text" placeholder="Enter Application ID or Student Name" style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Application: APP-2026-0127 - John Doe</h3>
+            <div class="document-viewer">
+                <div class="document-info">
+                    <div>
+                        <strong>Resume.pdf</strong>
+                        <p style="color: #666; margin-top: 5px; font-size: 14px;">Uploaded: Jan 20, 2026 | Size: 245 KB</p>
+                    </div>
+                    <div class="doc-actions">
+                        <button class="btn btn-primary">Download</button>
+                        <button class="btn btn-primary">Preview</button>
+                    </div>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 6px; min-height: 200px; border: 1px solid #ddd;">
+                    <p style="color: #666; text-align: center; padding: 60px 0;">Document Preview Area</p>
+                </div>
+            </div>
+
+            <div class="document-viewer">
+                <div class="document-info">
+                    <div>
+                        <strong>Cover_Letter.pdf</strong>
+                        <p style="color: #666; margin-top: 5px; font-size: 14px;">Uploaded: Jan 20, 2026 | Size: 128 KB</p>
+                    </div>
+                    <div class="doc-actions">
+                        <button class="btn btn-primary">Download</button>
+                        <button class="btn btn-primary">Preview</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="document-viewer">
+                <div class="document-info">
+                    <div>
+                        <strong>Academic_Transcripts.pdf</strong>
+                        <p style="color: #666; margin-top: 5px; font-size: 14px;">Uploaded: Jan 20, 2026 | Size: 356 KB</p>
+                    </div>
+                    <div class="doc-actions">
+                        <button class="btn btn-primary">Download</button>
+                        <button class="btn btn-primary">Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Document Review Form</h3>
+            <form>
+                <div class="form-group">
+                    <label>Document Completeness</label>
+                    <select>
+                        <option>Select status</option>
+                        <option>All documents complete</option>
+                        <option>Missing documents</option>
+                        <option>Need additional documents</option>
+                    </select>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 15px;">Document Checklist</h4>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" checked style="width: auto; margin-right: 10px;">
+                            <span>Resume/CV</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" checked style="width: auto; margin-right: 10px;">
+                            <span>Cover Letter</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" checked style="width: auto; margin-right: 10px;">
+                            <span>Academic Transcripts</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Recommendation Letters</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Portfolio/Work Samples</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Document Quality Assessment</label>
+                    <select>
+                        <option>Select rating</option>
+                        <option>Excellent - Professional quality</option>
+                        <option>Good - Meets standards</option>
+                        <option>Fair - Needs improvement</option>
+                        <option>Poor - Major issues</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Issues/Comments</label>
+                    <textarea rows="4" placeholder="Note any issues with documents or additional comments"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-success">Approve Documents</button>
+                    <button type="button" class="btn btn-danger">Request Resubmission</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

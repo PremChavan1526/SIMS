@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h2>MyApp Dashboard</h2>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Your Dashboard!</h1>
+        <p class="welcome-text">You've successfully logged in.</p>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Analytics</h3>
+                <p>View your statistics and insights</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Settings</h3>
+                <p>Manage your account preferences</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">📁</div>
+                <h3>Projects</h3>
+                <p>Access your files and projects</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <h3>Team</h3>
+                <p>Collaborate with your team</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Support - Campus TPO Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .recommendation {
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 10px;
+            border-left: 5px solid;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .recommendation:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .rec-high {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+
+        .rec-medium {
+            background: #fff3e0;
+            border-left-color: #ff9800;
+        }
+
+        .rec-low {
+            background: #e3f2fd;
+            border-left-color: #2196f3;
+        }
+
+        .rec-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .rec-text {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .goal-item {
+            margin-bottom: 25px;
+        }
+
+        .goal-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .progress-bar {
+            background: #f0f0f0;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            transition: width 0.6s ease;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .kpi-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .kpi-title {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .kpi-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .kpi-trend {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .trend-up {
+            background: #e8f5e9;
+            color: #4caf50;
+        }
+
+        .trend-down {
+            background: #ffebee;
+            color: #f44336;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .action-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #667eea;
+        }
+
+        .action-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .action-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .priority-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .priority-high {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .priority-medium {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .priority-low {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .action-desc {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .insights-list {
+            list-style: none;
+        }
+
+        .insights-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            line-height: 1.6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .modal-close {
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        @media (max-width: 1024px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                font-size: 24px;
+            }
+
+            .kpi-grid,
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">💡 Decision Support</h1>
+        
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-title">Overall Health Score</div>
+                <div class="kpi-value">87%</div>
+                <span class="kpi-trend trend-up">↑ 5% from last quarter</span>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Action Items Pending</div>
+                <div class="kpi-value">12</div>
+                <span class="kpi-trend trend-down">↓ 3 from last week</span>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Risk Level</div>
+                <div class="kpi-value">Low</div>
+                <span class="kpi-trend trend-up">Improved from Medium</span>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Recommendations Active</div>
+                <div class="kpi-value">8</div>
+                <span class="kpi-trend trend-up">↑ 2 new this month</span>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>📈 Key Recommendations</h3>
+                <div class="recommendation rec-high" onclick="showDetails('high')">
+                    <div class="rec-title">High Priority</div>
+                    <div class="rec-text">Focus on improving Mechanical Engineering placement rate by partnering with 3-5 more manufacturing companies. Target: 85% placement rate by Q2.</div>
+                </div>
+                <div class="recommendation rec-medium" onclick="showDetails('medium')">
+                    <div class="rec-title">Medium Priority</div>
+                    <div class="rec-text">Increase internship-to-placement conversion rate from current 65% to target 75%. Implement mentor program and skill workshops.</div>
+                </div>
+                <div class="recommendation rec-low" onclick="showDetails('opportunity')">
+                    <div class="rec-title">Opportunity</div>
+                    <div class="rec-text">CS department showing 12% growth - consider expanding batch size for next year. Market demand supports 15% increase.</div>
+                </div>
+                <div class="recommendation rec-medium" onclick="showDetails('attention')">
+                    <div class="rec-title">Needs Attention</div>
+                    <div class="rec-text">Student skill gap in emerging technologies. Recommend adding courses in AI/ML, Cloud Computing, and Data Science.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Strategic Goals Progress</h3>
+                <div class="goal-item">
+                    <div class="goal-label">
+                        <span>Target Placement Rate: 90%</span>
+                        <span>87%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 87%"></div>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-label">
+                        <span>Company Partnerships: 60</span>
+                        <span>45</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-label">
+                        <span>Student Satisfaction: 95%</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-label">
+                        <span>Average Package: ₹6.5L</span>
+                        <span>₹5.8L</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 89%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <h3>🔍 Data-Driven Insights</h3>
+            <ul class="insights-list">
+                <li><strong>Peak Hiring Season:</strong> September-December shows 65% of annual placements. Plan major campus drives accordingly.</li>
+                <li><strong>Top Performing Departments:</strong> CS and ECE maintain 90%+ placement. Share best practices with other departments.</li>
+                <li><strong>Emerging Trend:</strong> Companies increasingly prefer candidates with internship experience (78% higher selection rate).</li>
+                <li><strong>Skills Gap Analysis:</strong> 45% of students require additional training in communication and soft skills.</li>
+                <li><strong>Regional Preferences:</strong> 62% of students prefer metro city placements. Expand partnerships with companies in tier-1 cities.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Recommended Actions</h3>
+            <div class="action-grid">
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Industry Partnership Drive</span>
+                        <span class="priority-badge priority-high">High</span>
+                    </div>
+                    <div class="action-desc">
+                        Initiate outreach to 15 manufacturing and core engineering companies to improve placement rates for Mechanical and Civil departments.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('partnership')">View Action Plan</button>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Skill Enhancement Program</span>
+                        <span class="priority-badge priority-high">High</span>
+                    </div>
+                    <div class="action-desc">
+                        Launch 6-month intensive training program covering AI/ML, Data Science, and Cloud Computing to bridge skill gaps.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('training')">View Action Plan</button>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Mentorship Initiative</span>
+                        <span class="priority-badge priority-medium">Medium</span>
+                    </div>
+                    <div class="action-desc">
+                        Establish alumni mentorship program connecting current students with placed alumni for guidance and support.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('mentorship')">View Action Plan</button>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Internship Portal Enhancement</span>
+                        <span class="priority-badge priority-medium">Medium</span>
+                    </div>
+                    <div class="action-desc">
+                        Upgrade internship tracking system and add features for better student-company matching.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('portal')">View Action Plan</button>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Soft Skills Workshop</span>
+                        <span class="priority-badge priority-low">Low</span>
+                    </div>
+                    <div class="action-desc">
+                        Conduct monthly workshops on communication, teamwork, and professional etiquette.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('workshop')">View Action Plan</button>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-header">
+                        <span class="action-title">Campus Infrastructure Review</span>
+                        <span class="priority-badge priority-low">Low</span>
+                    </div>
+                    <div class="action-desc">
+                        Assess and upgrade interview facilities, virtual interview setup, and placement office infrastructure.
+                    </div>
+                    <button class="action-btn" onclick="takeAction('infrastructure')">View Action Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="actionModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-header" id="modalTitle">Action Plan</h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(type) {
+            const messages = {
+                high: 'Detailed Analysis: Mechanical Engineering has a 20% lower placement rate compared to CS. Manufacturing sector shows 15% growth. Recommended actions include visiting 5 manufacturing hubs, organizing specialized job fairs, and creating industry-specific training modules.',
+                medium: 'Conversion Analysis: Current 65% conversion suggests need for better internship support. Implement monthly check-ins, feedback sessions, and performance tracking. Target companies showing 80%+ conversion rates.',
+                opportunity: 'Growth Analysis: CS applications increased 12% YoY. Industry demand up 18%. Infrastructure ready for 15% expansion. Recommend adding 2 new sections with focus on AI/ML specialization.',
+                attention: 'Skill Gap Report: 45% students lack proficiency in emerging tech. Industry survey shows 70% preference for AI/ML skills. Recommend 3-month intensive bootcamp, industry certifications, and hands-on projects.'
+            };
+            alert(messages[type]);
+        }
+
+        function takeAction(type) {
+            const actionPlans = {
+                partnership: {
+                    title: 'Industry Partnership Drive - Action Plan',
+                    content: `
+                        <h3>Objectives:</h3>
+                        <ul>
+                            <li>Connect with 15 manufacturing companies</li>
+                            <li>Achieve 85% placement in Mechanical dept</li>
+                            <li>Timeline: 6 months</li>
+                        </ul>
+                        <h3>Action Steps:</h3>
+                        <ol>
+                            <li>Research and identify target companies (Week 1-2)</li>
+                            <li>Initial outreach and presentations (Week 3-6)</li>
+                            <li>Schedule campus visits (Month 2-3)</li>
+                            <li>Sign MoUs and plan recruitment drives (Month 4-6)</li>
+                        </ol>
+                        <h3>Resources Needed:</h3>
+                        <ul>
+                            <li>Budget: ₹2,00,000 for travel and events</li>
+                            <li>Team: 3 faculty members, TPO office support</li>
+                            <li>Collateral: Company brochures, student profiles</li>
+                        </ul>
+                    `
+                },
+                training: {
+                    title: 'Skill Enhancement Program - Action Plan',
+                    content: `
+                        <h3>Program Overview:</h3>
+                        <ul>
+                            <li>Duration: 6 months intensive training</li>
+                            <li>Target: 300 students across departments</li>
+                            <li>Focus: AI/ML, Data Science, Cloud Computing</li>
+                        </ul>
+                        <h3>Curriculum:</h3>
+                        <ol>
+                            <li>Foundation courses (Month 1-2)</li>
+                            <li>Advanced topics and projects (Month 3-4)</li>
+                            <li>Industry certifications (Month 5-6)</li>
+                        </ol>
+                        <h3>Partners & Resources:</h3>
+                        <ul>
+                            <li>Collaborate with Coursera, Udemy for content</li>
+                            <li>Industry experts for guest lectures</li>
+                            <li>Lab infrastructure upgrades</li>
+                        </ul>
+                    `
+                },
+                mentorship: {
+                    title: 'Mentorship Initiative - Action Plan',
+                    content: `
+                        <h3>Program Structure:</h3>
+                        <ul>
+                            <li>Connect 500 students with alumni mentors</li>
+                            <li>1:1 monthly sessions</li>
+                            <li>Career guidance and interview prep</li>
+                        </ul>
+                        <h3>Implementation:</h3>
+                        <ol>
+                            <li>Create alumni database (Month 1)</li>
+                            <li>Launch matching platform (Month 2)</li>
+                            <li>Onboard first batch (Month 3)</li>
+                            <li>Track and measure outcomes (Ongoing)</li>
+                        </ol>
+                    `
+                },
+                portal: {
+                    title: 'Internship Portal Enhancement',
+                    content: `<h3>Upgrade Features:</h3>
+                        <ul>
+                            <li>AI-powered student-company matching</li>
+                            <li>Real-time application tracking</li>
+                            <li>Automated feedback collection</li>
+                            <li>Mobile app development</li>
+                        </ul>
+                        <h3>Timeline: 4 months</h3>
+                        <h3>Budget: ₹5,00,000</h3>`
+                },
+                workshop: {
+                    title: 'Soft Skills Workshop Series',
+                    content: `<h3>Workshop Topics:</h3>
+                        <ul>
+                            <li>Communication & Presentation Skills</li>
+                            <li>Professional Etiquette</li>
+                            <li>Team Collaboration</li>
+                            <li>Leadership Development</li>
+                        </ul>
+                        <h3>Schedule: Monthly sessions, 100 students per batch</h3>`
+                },
+                infrastructure: {
+                    title: 'Campus Infrastructure Review',
+                    content: `<h3>Assessment Areas:</h3>
+                        <ul>
+                            <li>Interview rooms and equipment</li>
+                            <li>Virtual interview setup</li>
+                            <li>Placement office digitization</li>
+                            <li>Student waiting areas</li>
+                        </ul>
+                        <h3>Estimated Budget: ₹8,00,000</h3>`
+                }
+            };
+
+            const plan = actionPlans[type];
+            document.getElementById('modalTitle').textContent = plan.title;
+            document.getElementById('modalBody').innerHTML = plan.content;
+            document.getElementById('actionModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('actionModal').classList.remove('active');
+        }
+
+        window.onclick = function(e) {
+            const modal = document.getElementById('actionModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

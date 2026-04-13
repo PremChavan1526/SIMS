@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Student Portal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                Student Portal
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="index.html">Home</a>
+                <a href="opportunities.html">Opportunities</a>
+                <a href="learnings.html">Learnings</a>
+                <a href="contact.html" class="active">Contact us</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="portfolio.html">Portfolio</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1 class="welcome-header">Contact Us</h1>
+            
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Get in Touch</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="internship">Internship Query</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="application">Application Status</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Contact Information</h3>
+                    <p><strong>Office Address:</strong></p>
+                    <p>Student Internship Center<br>
+                    123 University Drive<br>
+                    Campus Building A, Room 201<br>
+                    City, State 12345</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Email:</strong></p>
+                    <p>internships@university.edu</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Phone:</strong></p>
+                    <p>(555) 123-4567</p>
+                    
+                    <p style="margin-top: 20px;"><strong>Office Hours:</strong></p>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                    Saturday: 10:00 AM - 2:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+
+                <div class="card">
+                    <h3>Frequently Asked Questions</h3>
+                    <ul>
+                        <li><strong>How do I apply for an internship?</strong><br>
+                        Visit the Opportunities page and click on any internship listing to apply.</li>
+                        
+                        <li><strong>When will I hear back about my application?</strong><br>
+                        You should receive a response within 2-3 weeks of submission.</li>
+                        
+                        <li><strong>Can I apply for multiple internships?</strong><br>
+                        Yes, you can apply for as many positions as you qualify for.</li>
+                        
+                        <li><strong>What documents do I need?</strong><br>
+                        Typically, you'll need a resume, cover letter, and academic transcripts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

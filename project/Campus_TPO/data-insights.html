@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insights - Campus TPO Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Campus TPO/<br>Principal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="index.html">🏠 Home</a>
+            <a href="data-insights.html" class="active">📊 Data Insights</a>
+            <a href="campus-monitoring.html">🏫 Campus Monitoring</a>
+            <a href="generate-reports.html">📄 Generate Reports</a>
+            <a href="decision-support.html">💡 Decision Support</a>
+            <a href="view-statistics.html">📈 View Statistics</a>
+            <a href="#">💼 Opportunities</a>
+            <a href="#">📧 Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="#">👤 Profile</a>
+            <a href="#">🚪 Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">📊 Data Insights</h1>
+        
+        <div class="grid-3" style="margin-bottom: 30px;">
+            <div class="info-card">
+                <h3>Student Analytics</h3>
+                <div class="monitor-value">1,247</div>
+                <div class="monitor-label">Total Enrolled Students</div>
+                <div style="margin-top: 10px;">
+                    <span class="trend trend-up">↑ 12% from last year</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <h3>Placement Rate</h3>
+                <div class="monitor-value">87%</div>
+                <div class="monitor-label">Successfully Placed</div>
+                <div style="margin-top: 10px;">
+                    <span class="trend trend-up">↑ 5% improvement</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <h3>Company Partnerships</h3>
+                <div class="monitor-value">45</div>
+                <div class="monitor-label">Active Companies</div>
+                <div style="margin-top: 10px;">
+                    <span class="trend trend-up">↑ 8 new this quarter</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 class="chart-header">Monthly Placement Trends</h3>
+            <div class="chart-placeholder">
+                📈 Placement trend chart showing consistent growth across 12 months
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="chart-container">
+                <h3 class="chart-header">Department-wise Distribution</h3>
+                <div class="chart-placeholder">
+                    🎓 CS: 35% | ECE: 25% | MECH: 20% | Others: 20%
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-header">Top Recruiting Companies</h3>
+                <div class="chart-placeholder">
+                    🏢 TCS, Infosys, Wipro, Cognizant, Accenture
+                </div>
+            </div>
+        </div>
+
+        <div class="data-table" style="margin-top: 30px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Total Students</th>
+                        <th>Avg Package</th>
+                        <th>Highest Package</th>
+                        <th>Placement %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>436</td>
+                        <td>₹6.5 LPA</td>
+                        <td>₹18 LPA</td>
+                        <td><span class="status-badge status-active">90%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Electronics & Communication</td>
+                        <td>312</td>
+                        <td>₹5.8 LPA</td>
+                        <td>₹14 LPA</td>
+                        <td><span class="status-badge status-active">86%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical Engineering</td>
+                        <td>249</td>
+                        <td>₹5.2 LPA</td>
+                        <td>₹12 LPA</td>
+                        <td><span class="status-badge status-pending">82%</span></td>
+                    </tr>
+                    <tr>
+                        <td>Civil Engineering</td>
+                        <td>250</td>
+                        <td>₹4.8 LPA</td>
+                        <td>₹10 LPA</td>
+                        <td><span class="status-badge status-active">88%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPO Portal - Download Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">TPO Portal</div>
+        <nav class="sidebar-menu">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>Download Data</h1>
+        
+        <div class="dashboard-layout" style="margin-bottom: 30px;">
+            <div class="card">
+                <h2 style="color: #2c3e50; margin-bottom: 20px; border-bottom: 2px solid #667eea; padding-bottom: 10px;">Export Options</h2>
+                
+                <div class="form-group">
+                    <label for="dataType">Select Data Type</label>
+                    <select id="dataType">
+                        <option value="">Choose data to export</option>
+                        <option value="students">Student Database</option>
+                        <option value="applications">Application Records</option>
+                        <option value="placements">Placement Statistics</option>
+                        <option value="internships">Internship Records</option>
+                        <option value="companies">Company Database</option>
+                        <option value="attendance">Attendance Records</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateFrom">From Date</label>
+                    <input type="date" id="dateFrom">
+                </div>
+
+                <div class="form-group">
+                    <label for="dateTo">To Date</label>
+                    <input type="date" id="dateTo">
+                </div>
+
+                <div class="form-group">
+                    <label for="format">Export Format</label>
+                    <select id="format">
+                        <option value="excel">Excel (.xlsx)</option>
+                        <option value="csv">CSV (.csv)</option>
+                        <option value="pdf">PDF (.pdf)</option>
+                    </select>
+                </div>
+
+                <button class="btn-primary" onclick="downloadData()">Download Data</button>
+            </div>
+
+            <div class="card stats-card">
+                <h2>Available Reports</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Total Records:</span>
+                    <span class="stat-value">2,450</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Last Export:</span>
+                    <span class="stat-value">Jan 15, 2026</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Data Size:</span>
+                    <span class="stat-value">15.4 MB</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Format:</span>
+                    <span class="stat-value">Excel</span>
+                </div>
+            </div>
+        </div>
+
+        <h1>Quick Downloads</h1>
+        
+        <div class="opportunities-grid">
+            <div class="opportunity-card">
+                <h3>Student Master List</h3>
+                <p><strong>Records:</strong> 250 Students</p>
+                <p><strong>Includes:</strong> Personal Info, Academic Records, Contact Details</p>
+                <p><strong>Last Updated:</strong> Today</p>
+                <p><strong>Size:</strong> 2.5 MB</p>
+                <button class="btn-primary" onclick="quickDownload('Student Master List')">Download Excel</button>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Placement Report 2025-26</h3>
+                <p><strong>Records:</strong> 180 Placements</p>
+                <p><strong>Includes:</strong> Company Names, Packages, Dates, Student Details</p>
+                <p><strong>Last Updated:</strong> Jan 20, 2026</p>
+                <p><strong>Size:</strong> 1.8 MB</p>
+                <button class="btn-primary" onclick="quickDownload('Placement Report')">Download Excel</button>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Active Internships</h3>
+                <p><strong>Records:</strong> 45 Active Internships</p>
+                <p><strong>Includes:</strong> Company Info, Stipends, Durations, Applications</p>
+                <p><strong>Last Updated:</strong> Today</p>
+                <p><strong>Size:</strong> 890 KB</p>
+                <button class="btn-primary" onclick="quickDownload('Active Internships')">Download Excel</button>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Application Analytics</h3>
+                <p><strong>Records:</strong> 485 Applications</p>
+                <p><strong>Includes:</strong> Status, Timelines, Success Rates, Student Profiles</p>
+                <p><strong>Last Updated:</strong> Today</p>
+                <p><strong>Size:</strong> 3.2 MB</p>
+                <button class="btn-primary" onclick="quickDownload('Application Analytics')">Download Excel</button>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Company Database</h3>
+                <p><strong>Records:</strong> 85 Companies</p>
+                <p><strong>Includes:</strong> Contact Info, Visit History, Recruitment Patterns</p>
+                <p><strong>Last Updated:</strong> Jan 18, 2026</p>
+                <p><strong>Size:</strong> 1.5 MB</p>
+                <button class="btn-primary" onclick="quickDownload('Company Database')">Download Excel</button>
+            </div>
+
+            <div class="opportunity-card">
+                <h3>Monthly Statistics</h3>
+                <p><strong>Records:</strong> Full Year Data</p>
+                <p><strong>Includes:</strong> Monthly Trends, Comparisons, Graphs, KPIs</p>
+                <p><strong>Last Updated:</strong> Today</p>
+                <p><strong>Size:</strong> 5.6 MB</p>
+                <button class="btn-primary" onclick="quickDownload('Monthly Statistics')">Download PDF</button>
+            </div>
+        </div>
+
+        <h1 style="margin-top: 40px;">Recent Downloads</h1>
+        
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Downloaded By</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student_Database_2026.xlsx</td>
+                        <td>Excel</td>
+                        <td>2.5 MB</td>
+                        <td>Admin</td>
+                        <td>2026-01-21</td>
+                        <td>
+                            <button class="btn-small">Re-download</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Placement_Report_Q4.pdf</td>
+                        <td>PDF</td>
+                        <td>1.2 MB</td>
+                        <td>TPO Officer</td>
+                        <td>2026-01-20</td>
+                        <td>
+                            <button class="btn-small">Re-download</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Internship_Applications.csv</td>
+                        <td>CSV</td>
+                        <td>890 KB</td>
+                        <td>Admin</td>
+                        <td>2026-01-19</td>
+                        <td>
+                            <button class="btn-small">Re-download</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Company_Contacts_2026.xlsx</td>
+                        <td>Excel</td>
+                        <td>1.5 MB</td>
+                        <td>TPO Officer</td>
+                        <td>2026-01-18</td>
+                        <td>
+                            <button class="btn-small">Re-download</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  
+</body>
+</html>

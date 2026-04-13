@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Progress - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Monitor Internship Progress</h1>
+        
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card">
+                    <h3>Overall Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Active Internships</span>
+                        <span class="stat-value">67</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">On Track</span>
+                        <span class="stat-value success">54</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Need Attention</span>
+                        <span class="stat-value warning">10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">At Risk</span>
+                        <span class="stat-value danger">3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Completed This Month</span>
+                        <span class="stat-value">12</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Filter Options</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select>
+                                <option>All Status</option>
+                                <option>On Track</option>
+                                <option>Need Attention</option>
+                                <option>At Risk</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Company</label>
+                            <select>
+                                <option>All Companies</option>
+                                <option>Tech Solutions Inc.</option>
+                                <option>Analytics Pro</option>
+                                <option>Creative Studios</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Department</label>
+                            <select>
+                                <option>All Departments</option>
+                                <option>Computer Science</option>
+                                <option>Business</option>
+                                <option>Engineering</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Apply Filters</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card">
+                    <h3>Active Internships (67)</h3>
+                    
+                    <div class="application-item" style="border-left-color: #10b981;">
+                        <div class="app-header">
+                            <strong>Sarah Smith - Data Analytics Intern</strong>
+                            <span class="badge approved">On Track</span>
+                        </div>
+                        <p><strong>Company:</strong> Analytics Pro | <strong>Supervisor:</strong> Dr. James Wilson</p>
+                        <p><strong>Progress:</strong> Week 8 of 24 | <strong>Completion:</strong> 33%</p>
+                        <div style="margin-top: 10px;">
+                            <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: #10b981; height: 100%; width: 33%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 14px;"><strong>Last Report:</strong> Submitted on Jan 18, 2026 - Excellent progress on data visualization project</p>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">View Details</a>
+                            <a href="#" class="action-link">Contact Student</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item" style="border-left-color: #f59e0b;">
+                        <div class="app-header">
+                            <strong>Kevin Park - Software Development Intern</strong>
+                            <span class="badge pending">Need Attention</span>
+                        </div>
+                        <p><strong>Company:</strong> Tech Solutions Inc. | <strong>Supervisor:</strong> Ms. Linda Chen</p>
+                        <p><strong>Progress:</strong> Week 12 of 12 | <strong>Completion:</strong> 75%</p>
+                        <div style="margin-top: 10px;">
+                            <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: #f59e0b; height: 100%; width: 75%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 14px; color: #f59e0b;"><strong>Issue:</strong> Final report overdue by 3 days</p>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">View Details</a>
+                            <a href="#" class="action-link">Send Reminder</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item" style="border-left-color: #10b981;">
+                        <div class="app-header">
+                            <strong>Jennifer Liu - UI/UX Design Intern</strong>
+                            <span class="badge approved">On Track</span>
+                        </div>
+                        <p><strong>Company:</strong> Creative Studios | <strong>Supervisor:</strong> Mr. Alex Turner</p>
+                        <p><strong>Progress:</strong> Week 15 of 16 | <strong>Completion:</strong> 94%</p>
+                        <div style="margin-top: 10px;">
+                            <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: #10b981; height: 100%; width: 94%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 14px;"><strong>Last Report:</strong> Submitted on Jan 20, 2026 - Outstanding performance, exceeding expectations</p>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">View Details</a>
+                            <a href="#" class="action-link">Contact Student</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item" style="border-left-color: #ef4444;">
+                        <div class="app-header">
+                            <strong>Michael Brown - Marketing Intern</strong>
+                            <span class="badge rejected">At Risk</span>
+                        </div>
+                        <p><strong>Company:</strong> Brand Boost LLC | <strong>Supervisor:</strong> Ms. Rachel Green</p>
+                        <p><strong>Progress:</strong> Week 6 of 12 | <strong>Completion:</strong> 35%</p>
+                        <div style="margin-top: 10px;">
+                            <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: #ef4444; height: 100%; width: 35%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 14px; color: #ef4444;"><strong>Issue:</strong> Multiple missed deadlines, supervisor reported attendance concerns</p>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">View Details</a>
+                            <a href="#" class="action-link">Schedule Meeting</a>
+                        </div>
+                    </div>
+
+                    <div class="application-item" style="border-left-color: #10b981;">
+                        <div class="app-header">
+                            <strong>Robert Chen - Machine Learning Intern</strong>
+                            <span class="badge approved">On Track</span>
+                        </div>
+                        <p><strong>Company:</strong> AI Innovations | <strong>Supervisor:</strong> Dr. Patricia Kim</p>
+                        <p><strong>Progress:</strong> Week 10 of 24 | <strong>Completion:</strong> 42%</p>
+                        <div style="margin-top: 10px;">
+                            <div style="background: #e5e7eb; height: 8px; border-radius: 4px; overflow: hidden;">
+                                <div style="background: #10b981; height: 100%; width: 42%;"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 14px;"><strong>Last Report:</strong> Submitted on Jan 19, 2026 - Making good progress on neural network project</p>
+                        <div style="margin-top: 10px;">
+                            <a href="#" class="action-link">View Details</a>
+                            <a href="#" class="action-link">Contact Student</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

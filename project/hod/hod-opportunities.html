@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - HOD Portal</title>
+    <link rel="stylesheet" href="hod.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            HOD Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="hod-index.html">Home</a>
+            <a href="hod-opportunities.html" class="active">Opportunities</a>
+            <a href="hod-contact.html">Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="hod-profile.html">Profile</a>
+            <a href="hod-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Manage Internship Opportunities</h1>
+        
+        <div class="action-buttons">
+            <a href="hod-upload.html" class="action-btn">Add New Opportunity</a>
+            <a href="#" class="action-btn">Bulk Upload</a>
+            <a href="#" class="action-btn">Export List</a>
+        </div>
+
+        <div class="card">
+            <h3>Opportunity Overview</h3>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: bold; color: #667eea;">28</div>
+                    <div style="color: #666; margin-top: 5px;">Active Positions</div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: bold; color: #10b981;">342</div>
+                    <div style="color: #666; margin-top: 5px;">Total Applications</div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: bold; color: #f59e0b;">8</div>
+                    <div style="color: #666; margin-top: 5px;">Closing Soon</div>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: bold; color: #6366f1;">42</div>
+                    <div style="color: #666; margin-top: 5px;">Partner Companies</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Active Opportunities (28)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Applications</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Software Development Intern</td>
+                            <td>Tech Solutions Inc.</td>
+                            <td>Remote</td>
+                            <td>45</td>
+                            <td>Feb 15, 2026</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics Intern</td>
+                            <td>Analytics Pro</td>
+                            <td>New York, NY</td>
+                            <td>38</td>
+                            <td>Feb 20, 2026</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI/UX Design Intern</td>
+                            <td>Creative Studios</td>
+                            <td>San Francisco, CA</td>
+                            <td>52</td>
+                            <td>Jan 31, 2026</td>
+                            <td><span class="badge pending">Closing Soon</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Intern</td>
+                            <td>Brand Boost LLC</td>
+                            <td>Chicago, IL</td>
+                            <td>29</td>
+                            <td>Feb 10, 2026</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning Intern</td>
+                            <td>AI Innovations</td>
+                            <td>Boston, MA</td>
+                            <td>67</td>
+                            <td>Feb 28, 2026</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cybersecurity Intern</td>
+                            <td>SecureNet Systems</td>
+                            <td>Remote</td>
+                            <td>34</td>
+                            <td>Feb 18, 2026</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Apps</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card">
+                    <h3>Opportunities by Category</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Technology</span>
+                        <span class="stat-value">15</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Business & Finance</span>
+                        <span class="stat-value">6</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Design & Creative</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Marketing</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card">
+                    <h3>Recently Closed Opportunities</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Company</th>
+                                    <th>Total Apps</th>
+                                    <th>Hired</th>
+                                    <th>Closed Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Frontend Developer Intern</td>
+                                    <td>WebTech Co.</td>
+                                    <td>42</td>
+                                    <td>2</td>
+                                    <td>Jan 15, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Analyst Intern</td>
+                                    <td>Consulting Group</td>
+                                    <td>35</td>
+                                    <td>3</td>
+                                    <td>Jan 10, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Cloud Engineer Intern</td>
+                                    <td>CloudTech Inc.</td>
+                                    <td>28</td>
+                                    <td>2</td>
+                                    <td>Jan 5, 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

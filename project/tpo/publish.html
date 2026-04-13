@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPO Portal - Publish Opportunities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">TPO Portal</div>
+        <nav class="sidebar-menu">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1>Publish New Opportunity</h1>
+        
+        <div class="card" style="max-width: 800px;">
+            <form id="publishForm">
+                <div class="form-group">
+                    <label for="opportunityType">Opportunity Type</label>
+                    <select id="opportunityType" required>
+                        <option value="">Select Type</option>
+                        <option value="internship">Internship</option>
+                        <option value="placement">Placement</option>
+                        <option value="training">Training Program</option>
+                        <option value="workshop">Workshop</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" placeholder="Enter company name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position/Role</label>
+                    <input type="text" id="position" placeholder="Enter position title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="5" placeholder="Enter opportunity description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="eligibility">Eligibility Criteria</label>
+                    <textarea id="eligibility" rows="3" placeholder="Enter eligibility requirements" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Salary/Stipend</label>
+                    <input type="text" id="salary" placeholder="Enter salary/stipend amount" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline">Application Deadline</label>
+                    <input type="date" id="deadline" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email</label>
+                    <input type="email" id="contactEmail" placeholder="Enter contact email" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Publish Opportunity</button>
+            </form>
+        </div>
+
+        <h1 style="margin-top: 40px;">Published Opportunities</h1>
+        
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Type</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tech Corp</td>
+                        <td>Software Developer</td>
+                        <td>Placement</td>
+                        <td>2026-02-15</td>
+                        <td><span class="status-active">Active</span></td>
+                        <td>
+                            <button class="btn-small">Edit</button>
+                            <button class="btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Innovation Labs</td>
+                        <td>Data Analyst Intern</td>
+                        <td>Internship</td>
+                        <td>2026-02-20</td>
+                        <td><span class="status-active">Active</span></td>
+                        <td>
+                            <button class="btn-small">Edit</button>
+                            <button class="btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Digital Solutions</td>
+                        <td>UI/UX Designer</td>
+                        <td>Placement</td>
+                        <td>2026-01-30</td>
+                        <td><span class="status-pending">Closing Soon</span></td>
+                        <td>
+                            <button class="btn-small">Edit</button>
+                            <button class="btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('publishForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Opportunity published successfully!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

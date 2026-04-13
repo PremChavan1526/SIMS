@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Opportunities - HOD Portal</title>
+    <link rel="stylesheet" href="hod.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            HOD Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="hod-index.html">Home</a>
+            <a href="hod-opportunities.html">Opportunities</a>
+            <a href="hod-contact.html">Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="hod-profile.html">Profile</a>
+            <a href="hod-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Upload Opportunities</h1>
+        
+        <div class="action-buttons">
+            <a href="#" class="action-btn">Single Entry</a>
+            <a href="#" class="action-btn">Bulk Upload</a>
+            <a href="#" class="action-btn">Download Template</a>
+        </div>
+
+        <div class="card">
+            <h3>Create New Internship Opportunity</h3>
+            <form>
+                <div class="form-group">
+                    <label>Position Title *</label>
+                    <input type="text" placeholder="e.g., Software Development Intern" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" placeholder="Company name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select>
+                            <option>Select industry</option>
+                            <option>Technology</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Manufacturing</option>
+                            <option>Consulting</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Location *</label>
+                        <input type="text" placeholder="City, State or Remote" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Duration *</label>
+                        <select required>
+                            <option>Select duration</option>
+                            <option>3 months</option>
+                            <option>4 months</option>
+                            <option>6 months</option>
+                            <option>12 months</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Positions</label>
+                        <input type="number" placeholder="1" value="1" min="1">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Stipend (per month)</label>
+                        <input type="text" placeholder="e.g., $1500">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Work Mode</label>
+                        <select>
+                            <option>Select work mode</option>
+                            <option>Remote</option>
+                            <option>On-site</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Job Description *</label>
+                    <textarea rows="6" placeholder="Describe the internship role, responsibilities, and day-to-day activities..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Required Skills</label>
+                    <textarea rows="3" placeholder="List required skills (comma separated)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Skills</label>
+                    <textarea rows="3" placeholder="List preferred but not mandatory skills"></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Minimum GPA</label>
+                        <select>
+                            <option>No minimum</option>
+                            <option>2.5</option>
+                            <option>3.0</option>
+                            <option>3.5</option>
+                            <option>3.7</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Eligible Year</label>
+                        <select>
+                            <option>All Years</option>
+                            <option>Sophomore and above</option>
+                            <option>Junior and Senior only</option>
+                            <option>Senior only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Application Deadline *</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expected Start Date</label>
+                        <input type="date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Email *</label>
+                    <input type="email" placeholder="recruiter@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Information</label>
+                    <textarea rows="3" placeholder="Any additional details or requirements"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" style="width: auto; margin-right: 10px;">
+                        <span>Publish immediately and notify all eligible students</span>
+                    </label>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-success">Publish Opportunity</button>
+                    <button type="button" class="btn btn-primary">Save as Draft</button>
+                    <button type="reset" class="btn" style="background: #6b7280; color: white;">Clear Form</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Bulk Upload from Excel</h3>
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 8px; text-align: center; border: 2px dashed #ddd;">
+                <div style="font-size: 48px; margin-bottom: 15px;">📤</div>
+                <h4 style="margin-bottom: 10px;">Upload Excel File</h4>
+                <p style="color: #666; margin-bottom: 20px;">Upload an Excel file with multiple internship opportunities</p>
+                <input type="file" accept=".xlsx,.xls" style="display: none;" id="bulkUpload">
+                <label for="bulkUpload" class="btn btn-primary" style="cursor: pointer;">Choose File</label>
+                <p style="color: #999; font-size: 13px; margin-top: 15px;">Supported formats: .xlsx, .xls | Max size: 10MB</p>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <a href="#" class="btn btn-success">Download Excel Template</a>
+                <a href="#" class="action-link" style="margin-left: 15px;">View Upload Instructions</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Recently Uploaded Opportunities</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Uploaded By</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Software Development Intern</td>
+                            <td>Tech Solutions Inc.</td>
+                            <td>Remote</td>
+                            <td>Dr. Jane Doe (HOD)</td>
+                            <td>Jan 20, 2026</td>
+                            <td><span class="badge approved">Published</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">Unpublish</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics Intern</td>
+                            <td>Analytics Pro</td>
+                            <td>New York, NY</td>
+                            <td>Dr. Jane Doe (HOD)</td>
+                            <td>Jan 19, 2026</td>
+                            <td><span class="badge approved">Published</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">Unpublish</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning Intern</td>
+                            <td>AI Innovations</td>
+                            <td>Boston, MA</td>
+                            <td>Dr. Jane Doe (HOD)</td>
+                            <td>Jan 18, 2026</td>
+                            <td><span class="badge pending">Draft</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">Publish</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus TPO/Principal Portal</title>
+    <link rel="stylesheet" href="./styles.css">
+   
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Campus TPO/<br>Principal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a onclick="showPage('home')" class="active" data-page="home">Home</a>
+            <a onclick="showPage('opportunities')" data-page="opportunities">Opportunities</a>
+            <a onclick="showPage('contact')" data-page="contact">Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a onclick="showPage('profile')" data-page="profile">Profile</a>
+            <a onclick="logout()">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <!-- HOME PAGE -->
+<div id="home" class="page active">
+    <h1 class="welcome-header">Welcome TPO/Principal</h1>
+
+    <div class="dashboard-layout">
+        <div class="left-section">
+            <div class="card multi-section-card">
+
+                <a href="./data-insights.html" class="section-item">
+                    📊 Data Insights
+                </a>
+
+                <a href="./campus-monitoring.html" class="section-item">
+                    🏫 Campus Monitoring
+                </a>
+
+                <a href="./Reports.html" class="section-item">
+                    📄 Generate Reports
+                </a>
+
+                <a href="./decision.html" class="section-item">
+                    💡 Decision Support
+                </a>
+
+                <a href="./View.html" class="section-item">
+                    📈 View Statistics
+                </a>
+
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="card stats-data-card">
+                <div class="stats-section">
+                    <h3>Stats</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Students</span>
+                        <span class="stat-value">1,247</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Active Internships</span>
+                        <span class="stat-value">89</span>
+                    </div>
+                </div>
+
+                <div class="data-section">
+                    <h3>Data</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Pending Applications</span>
+                        <span class="stat-value">34</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">New Opportunities</span>
+                        <span class="stat-value">12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- OPPORTUNITIES PAGE -->
+        <div id="opportunities" class="page">
+            <h1 class="welcome-header">Internship Opportunities</h1>
+            
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Software Development Intern</div>
+                    <div class="opportunity-company">Tech Innovations Inc.</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 3 months<br>
+                        <strong>Stipend:</strong> ₹15,000/month<br>
+                        <strong>Location:</strong> Bangalore<br>
+                        <strong>Requirements:</strong> Java, Python, Web Development
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Tech</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Data Analyst Intern</div>
+                    <div class="opportunity-company">DataWorks Solutions</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 6 months<br>
+                        <strong>Stipend:</strong> ₹20,000/month<br>
+                        <strong>Location:</strong> Mumbai<br>
+                        <strong>Requirements:</strong> SQL, Excel, Python, Statistics
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">On-site</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Marketing Intern</div>
+                    <div class="opportunity-company">Creative Minds Agency</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 4 months<br>
+                        <strong>Stipend:</strong> ₹12,000/month<br>
+                        <strong>Location:</strong> Delhi<br>
+                        <strong>Requirements:</strong> Digital Marketing, Content Creation
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Part-time</span>
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Hybrid</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">UI/UX Design Intern</div>
+                    <div class="opportunity-company">Design Studio Pro</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 3 months<br>
+                        <strong>Stipend:</strong> ₹18,000/month<br>
+                        <strong>Location:</strong> Pune<br>
+                        <strong>Requirements:</strong> Figma, Adobe XD, User Research
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Business Analyst Intern</div>
+                    <div class="opportunity-company">Global Consulting Group</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 6 months<br>
+                        <strong>Stipend:</strong> ₹25,000/month<br>
+                        <strong>Location:</strong> Hyderabad<br>
+                        <strong>Requirements:</strong> Business Analysis, Excel, SQL
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Consulting</span>
+                        <span class="tag">On-site</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+
+                <div class="opportunity-card">
+                    <div class="opportunity-title">Machine Learning Intern</div>
+                    <div class="opportunity-company">AI Research Labs</div>
+                    <div class="opportunity-details">
+                        <strong>Duration:</strong> 5 months<br>
+                        <strong>Stipend:</strong> ₹30,000/month<br>
+                        <strong>Location:</strong> Bangalore<br>
+                        <strong>Requirements:</strong> Python, TensorFlow, Deep Learning
+                    </div>
+                    <div class="opportunity-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Remote</span>
+                    </div>
+                    <button class="apply-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact" class="page">
+            <h1 class="welcome-header">Contact Us</h1>
+            
+            <div class="contact-container">
+                <div class="contact-card">
+                    <h2 style="color: #667eea; margin-bottom: 25px;">Get in Touch</h2>
+                    
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" required placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+91 1234567890">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <select required>
+                                <option value="">Select a subject</option>
+                                <option value="internship">Internship Query</option>
+                                <option value="placement">Placement Information</option>
+                                <option value="partnership">Company Partnership</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea required placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFILE PAGE -->
+        <div id="profile" class="page">
+            <h1 class="welcome-header">Profile Settings</h1>
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">TP</div>
+                    <div class="profile-info">
+                        <h2>Training & Placement Officer</h2>
+                        <p>Campus TPO/Principal</p>
+                        <p>📧 tpo@campus.edu | 📱 +91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="profile-sections">
+                    <div class="profile-section">
+                        <h3>Personal Information</h3>
+                        <div class="info-row">
+                            <span class="info-label">Full Name</span>
+                            <span class="info-value">Dr. Rajesh Kumar</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Employee ID</span>
+                            <span class="info-value">TPO-2023-001</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Department</span>
+                            <span class="info-value">Training & Placement</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Joining Date</span>
+                            <span class="info-value">01 Jan 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>Contact Details</h3>
+                        <div class="info-row">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">tpo@campus.edu</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">+91 98765 43210</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Office</span>
+                            <span class="info-value">Admin Block, Room 201</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Campus</span>
+                            <span class="info-value">Main Campus</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>Account Statistics</h3>
+                        <div class="info-row">
+                            <span class="info-label">Students Managed</span>
+                            <span class="info-value">1,247</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Companies Contacted</span>
+                            <span class="info-value">45</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Active Campaigns</span>
+                            <span class="info-value">8</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Success Rate</span>
+                            <span class="info-value">92%</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3>Account Settings</h3>
+                        <div class="info-row">
+                            <span class="info-label">Account Type</span>
+                            <span class="info-value">Administrator</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Last Login</span>
+                            <span class="info-value">Today, 09:30 AM</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Security Level</span>
+                            <span class="info-value">High</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">2FA Status</span>
+                            <span class="info-value">Enabled ✓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Remove active class from all menu items
+            document.querySelectorAll('.sidebar-menu a, .sidebar-footer a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+
+            // Add active class to clicked menu item
+            const clickedLink = document.querySelector(`[data-page="${pageId}"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                alert('Logged out successfully!');
+                // In a real application, this would redirect to login page
+            }
+        }
+    </script>
+</body>
+</html>

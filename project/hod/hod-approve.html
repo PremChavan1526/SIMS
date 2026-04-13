@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve/Reject - HOD Portal</title>
+    <link rel="stylesheet" href="hod.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            HOD Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="hod-index.html">Home</a>
+            <a href="hod-opportunities.html">Opportunities</a>
+            <a href="hod-contact.html">Contact Us</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="hod-profile.html">Profile</a>
+            <a href="hod-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Approve / Reject Applications</h1>
+        
+        <div class="dashboard-layout">
+            <div class="left-section">
+                <div class="card">
+                    <h3>Approval Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Pending Approval</span>
+                        <span class="stat-value warning">18</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Approved This Month</span>
+                        <span class="stat-value success">67</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Rejected This Month</span>
+                        <span class="stat-value danger">12</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Success Rate</span>
+                        <span class="stat-value">84.8%</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Actions</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button class="btn btn-success" style="width: 100%;">Bulk Approve Selected</button>
+                        <button class="btn btn-danger" style="width: 100%;">Bulk Reject Selected</button>
+                        <button class="btn btn-primary" style="width: 100%;">Export Decision Report</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="card">
+                    <h3>Applications Ready for Decision (18)</h3>
+                    
+                    <div class="student-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                            <div>
+                                <h4>Sarah Smith - Data Analytics Intern</h4>
+                                <p><strong>Application ID:</strong> APP-2026-0126</p>
+                            </div>
+                            <input type="checkbox" style="width: 20px; height: 20px;">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                            <div>
+                                <p><strong>Company:</strong> Analytics Pro</p>
+                                <p><strong>Student ID:</strong> STU-2024-5678</p>
+                                <p><strong>Major:</strong> Data Science</p>
+                            </div>
+                            <div>
+                                <p><strong>GPA:</strong> 3.9</p>
+                                <p><strong>Year:</strong> Junior</p>
+                                <p><strong>Duration:</strong> 6 months</p>
+                            </div>
+                        </div>
+
+                        <div style="background: white; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; margin-bottom: 5px;"><strong>Coordinator Review:</strong></p>
+                            <p style="font-size: 13px;">Excellent candidate with strong academic record. All documents verified.</p>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-success">Approve</button>
+                            <button class="btn btn-danger">Reject</button>
+                            <a href="#" class="btn btn-primary">View Full Details</a>
+                        </div>
+                    </div>
+
+                    <div class="student-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                            <div>
+                                <h4>Kevin Park - Software Development Intern</h4>
+                                <p><strong>Application ID:</strong> APP-2026-0119</p>
+                            </div>
+                            <input type="checkbox" style="width: 20px; height: 20px;">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                            <div>
+                                <p><strong>Company:</strong> Tech Solutions Inc.</p>
+                                <p><strong>Student ID:</strong> STU-2024-3456</p>
+                                <p><strong>Major:</strong> Computer Science</p>
+                            </div>
+                            <div>
+                                <p><strong>GPA:</strong> 3.7</p>
+                                <p><strong>Year:</strong> Senior</p>
+                                <p><strong>Duration:</strong> 3 months</p>
+                            </div>
+                        </div>
+
+                        <div style="background: white; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; margin-bottom: 5px;"><strong>Coordinator Review:</strong></p>
+                            <p style="font-size: 13px;">Strong technical skills demonstrated. Good fit for the position.</p>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-success">Approve</button>
+                            <button class="btn btn-danger">Reject</button>
+                            <a href="#" class="btn btn-primary">View Full Details</a>
+                        </div>
+                    </div>
+
+                    <div class="student-card">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                            <div>
+                                <h4>Jennifer Liu - UI/UX Design Intern</h4>
+                                <p><strong>Application ID:</strong> APP-2026-0118</p>
+                            </div>
+                            <input type="checkbox" style="width: 20px; height: 20px;">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                            <div>
+                                <p><strong>Company:</strong> Creative Studios</p>
+                                <p><strong>Student ID:</strong> STU-2024-7890</p>
+                                <p><strong>Major:</strong> Design</p>
+                            </div>
+                            <div>
+                                <p><strong>GPA:</strong> 3.8</p>
+                                <p><strong>Year:</strong> Junior</p>
+                                <p><strong>Duration:</strong> 4 months</p>
+                            </div>
+                        </div>
+
+                        <div style="background: white; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; margin-bottom: 5px;"><strong>Coordinator Review:</strong></p>
+                            <p style="font-size: 13px;">Outstanding portfolio. Highly recommended for the position.</p>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-success">Approve</button>
+                            <button class="btn btn-danger">Reject</button>
+                            <a href="#" class="btn btn-primary">View Full Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Recent Decisions</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Application ID</th>
+                                    <th>Student</th>
+                                    <th>Position</th>
+                                    <th>Decision</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>APP-2026-0115</td>
+                                    <td>Robert Chen</td>
+                                    <td>Machine Learning Intern</td>
+                                    <td><span class="badge approved">Approved</span></td>
+                                    <td>Jan 20, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>APP-2026-0114</td>
+                                    <td>Emily Watson</td>
+                                    <td>Data Analytics Intern</td>
+                                    <td><span class="badge approved">Approved</span></td>
+                                    <td>Jan 20, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>APP-2026-0113</td>
+                                    <td>David Lee</td>
+                                    <td>Marketing Intern</td>
+                                    <td><span class="badge rejected">Rejected</span></td>
+                                    <td>Jan 19, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>APP-2026-0112</td>
+                                    <td>Lisa Wang</td>
+                                    <td>Software Development Intern</td>
+                                    <td><span class="badge approved">Approved</span></td>
+                                    <td>Jan 19, 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

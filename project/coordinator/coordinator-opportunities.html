@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html" class="active">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Manage Opportunities</h1>
+        
+        <div class="action-buttons">
+            <a href="#" class="action-btn">Add New Opportunity</a>
+            <a href="#" class="action-btn">Import from Excel</a>
+            <a href="#" class="action-btn">Export Report</a>
+        </div>
+
+        <div class="card">
+            <h3>Active Opportunities (15)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Applications</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Software Development Intern</td>
+                            <td>Tech Solutions Inc.</td>
+                            <td>Remote</td>
+                            <td>45</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Applications</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics Intern</td>
+                            <td>Analytics Pro</td>
+                            <td>New York, NY</td>
+                            <td>38</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Applications</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UI/UX Design Intern</td>
+                            <td>Creative Studios</td>
+                            <td>San Francisco, CA</td>
+                            <td>52</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Applications</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Marketing Intern</td>
+                            <td>Brand Boost LLC</td>
+                            <td>Chicago, IL</td>
+                            <td>29</td>
+                            <td><span class="badge pending">Closing Soon</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Applications</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning Intern</td>
+                            <td>AI Innovations</td>
+                            <td>Boston, MA</td>
+                            <td>67</td>
+                            <td><span class="badge approved">Active</span></td>
+                            <td>
+                                <a href="#" class="action-link">Edit</a>
+                                <a href="#" class="action-link">View Applications</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Create New Opportunity</h3>
+            <form>
+                <div class="form-group">
+                    <label>Position Title</label>
+                    <input type="text" placeholder="e.g., Software Development Intern">
+                </div>
+
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="Company name">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="City, State or Remote">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <select>
+                            <option>Select duration</option>
+                            <option>3 months</option>
+                            <option>4 months</option>
+                            <option>6 months</option>
+                            <option>12 months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Stipend</label>
+                        <input type="text" placeholder="e.g., $1500/month">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Number of Positions</label>
+                        <input type="number" placeholder="1" value="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Job Description</label>
+                    <textarea rows="5" placeholder="Describe the internship role, responsibilities, and requirements"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Required Skills</label>
+                    <input type="text" placeholder="e.g., Python, JavaScript, React (comma separated)">
+                </div>
+
+                <div class="form-group">
+                    <label>Minimum GPA</label>
+                    <select>
+                        <option>No minimum</option>
+                        <option>2.5</option>
+                        <option>3.0</option>
+                        <option>3.5</option>
+                        <option>3.7</option>
+                    </select>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Application Deadline</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Email</label>
+                    <input type="email" placeholder="contact@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" style="width: auto; margin-right: 10px;">
+                        <span>Publish immediately</span>
+                    </label>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-success">Create Opportunity</button>
+                    <button type="button" class="btn btn-primary">Save as Draft</button>
+                    <button type="reset" class="btn" style="background: #6b7280; color: white;">Clear Form</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Closed Opportunities</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Total Applications</th>
+                            <th>Hired</th>
+                            <th>Closed Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Frontend Developer Intern</td>
+                            <td>WebTech Co.</td>
+                            <td>42</td>
+                            <td>2</td>
+                            <td>Jan 15, 2026</td>
+                            <td>
+                                <a href="#" class="action-link">View Report</a>
+                                <a href="#" class="action-link">Archive</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Business Analyst Intern</td>
+                            <td>Consulting Group</td>
+                            <td>35</td>
+                            <td>3</td>
+                            <td>Jan 10, 2026</td>
+                            <td>
+                                <a href="#" class="action-link">View Report</a>
+                                <a href="#" class="action-link">Archive</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

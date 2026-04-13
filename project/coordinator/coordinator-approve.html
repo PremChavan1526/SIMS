@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve/Reject - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Approve / Reject Applications</h1>
+        
+        <div class="card">
+            <h3>Applications Ready for Decision</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Student Name</th>
+                            <th>Position</th>
+                            <th>GPA</th>
+                            <th>Verification</th>
+                            <th>Documents</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>APP-2026-0126</td>
+                            <td>Sarah Smith</td>
+                            <td>Data Analytics Intern</td>
+                            <td>3.9</td>
+                            <td><span class="badge verified">Verified</span></td>
+                            <td><span class="badge approved">Complete</span></td>
+                            <td>
+                                <a href="#" class="action-link">Review</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0119</td>
+                            <td>Kevin Park</td>
+                            <td>Software Development Intern</td>
+                            <td>3.7</td>
+                            <td><span class="badge verified">Verified</span></td>
+                            <td><span class="badge approved">Complete</span></td>
+                            <td>
+                                <a href="#" class="action-link">Review</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0118</td>
+                            <td>Jennifer Liu</td>
+                            <td>UI/UX Design Intern</td>
+                            <td>3.8</td>
+                            <td><span class="badge verified">Verified</span></td>
+                            <td><span class="badge approved">Complete</span></td>
+                            <td>
+                                <a href="#" class="action-link">Review</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0115</td>
+                            <td>Robert Chen</td>
+                            <td>Machine Learning Intern</td>
+                            <td>4.0</td>
+                            <td><span class="badge verified">Verified</span></td>
+                            <td><span class="badge approved">Complete</span></td>
+                            <td>
+                                <a href="#" class="action-link">Review</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Application Review - APP-2026-0126</h3>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h4>Student Information</h4>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Name</span>
+                    <span>Sarah Smith</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Student ID</span>
+                    <span>STU-2024-5678</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Major</span>
+                    <span>Data Science</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>GPA</span>
+                    <span>3.9</span>
+                </div>
+                <div class="stat-item">
+                    <span>Year</span>
+                    <span>Junior</span>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h4>Position Details</h4>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Position</span>
+                    <span>Data Analytics Intern</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Company</span>
+                    <span>Analytics Pro</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Location</span>
+                    <span>New York, NY</span>
+                </div>
+                <div class="stat-item">
+                    <span>Duration</span>
+                    <span>6 months</span>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h4>Review Summary</h4>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Verification Status</span>
+                    <span class="badge verified">Verified</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Documents Status</span>
+                    <span class="badge approved">Complete</span>
+                </div>
+                <div class="stat-item" style="border-bottom: 1px solid #ddd;">
+                    <span>Skills Match</span>
+                    <span style="color: #10b981; font-weight: 600;">95%</span>
+                </div>
+                <div class="stat-item">
+                    <span>Application Date</span>
+                    <span>Jan 19, 2026</span>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label>Decision</label>
+                    <select>
+                        <option value="">Select decision</option>
+                        <option value="approve">Approve Application</option>
+                        <option value="reject">Reject Application</option>
+                        <option value="waitlist">Move to Waitlist</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Comments/Feedback</label>
+                    <textarea rows="5" placeholder="Provide feedback for the student or internal notes"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" style="width: auto; margin-right: 10px;">
+                        <span>Send notification email to student</span>
+                    </label>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-success">Approve Application</button>
+                    <button type="button" class="btn btn-danger">Reject Application</button>
+                    <button type="button" class="btn btn-primary">Save Draft</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Recent Decisions</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Student</th>
+                            <th>Position</th>
+                            <th>Decision</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>APP-2026-0124</td>
+                            <td>Emily Chen</td>
+                            <td>Marketing Intern</td>
+                            <td><span class="badge approved">Approved</span></td>
+                            <td>Jan 20, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0123</td>
+                            <td>David Lee</td>
+                            <td>Cybersecurity Intern</td>
+                            <td><span class="badge rejected">Rejected</span></td>
+                            <td>Jan 20, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0117</td>
+                            <td>Maria Rodriguez</td>
+                            <td>Software Development Intern</td>
+                            <td><span class="badge approved">Approved</span></td>
+                            <td>Jan 19, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

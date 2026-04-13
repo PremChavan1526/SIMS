@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Applications - Coordinator Portal</title>
+    <link rel="stylesheet" href="coordinator.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            Coordinator Portal
+        </div>
+        
+        <nav class="sidebar-menu">
+            <a href="coordinator-index.html">Home</a>
+            <a href="coordinator-opportunities.html">Opportunities</a>
+            <a href="coordinator-contact.html">Contact</a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="coordinator-profile.html">Profile</a>
+            <a href="coordinator-logout.html">Logout</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="welcome-header">Verify Applications</h1>
+        
+        <div class="card">
+            <h3>Pending Verification (23 Applications)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Student Name</th>
+                            <th>Position</th>
+                            <th>Submitted Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>APP-2026-0127</td>
+                            <td>John Doe</td>
+                            <td>Software Development Intern</td>
+                            <td>Jan 20, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0126</td>
+                            <td>Sarah Smith</td>
+                            <td>Data Analytics Intern</td>
+                            <td>Jan 19, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0125</td>
+                            <td>Mike Johnson</td>
+                            <td>UI/UX Design Intern</td>
+                            <td>Jan 19, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0122</td>
+                            <td>Lisa Wang</td>
+                            <td>Marketing Intern</td>
+                            <td>Jan 18, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0121</td>
+                            <td>Tom Brown</td>
+                            <td>Machine Learning Intern</td>
+                            <td>Jan 18, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>APP-2026-0120</td>
+                            <td>Anna Garcia</td>
+                            <td>Cybersecurity Intern</td>
+                            <td>Jan 17, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td>
+                                <a href="#" class="action-link">View Details</a>
+                                <a href="#" class="action-link">Verify</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Verification Checklist</h3>
+            <form>
+                <div class="form-group">
+                    <label>Application ID</label>
+                    <input type="text" placeholder="Enter application ID">
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 15px;">Verification Items</h4>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Student ID verified</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Academic records validated</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Contact information correct</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>All required documents submitted</span>
+                        </label>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" style="width: auto; margin-right: 10px;">
+                            <span>Eligibility criteria met</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Verification Notes</label>
+                    <textarea rows="4" placeholder="Add any verification notes or observations"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-success">Mark as Verified</button>
+                    <button type="button" class="btn btn-danger">Request Corrections</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
